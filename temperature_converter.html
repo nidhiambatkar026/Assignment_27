@@ -7,8 +7,20 @@
 </head>
 <body>
     <script>
-        const temp= parseInt(promt("Enter Temperature: "));
-        
+        const temp= parseInt(prompt("Enter Temperature: "));
+        const unit= prompt("Enter the unit: (C for Celsicus and F for Fahrenheit)");
+
+        if(unit == 'F'){
+            const Fahrenheit = (temp *9/5 ) + 32;
+            console.log(`${temp} Celsicus is equals to ${Fahrenheit}`);
+        }
+        else if(unit == 'C'){
+            const Celsicus = (temp - 32)* 5/9;
+            console.log(`${temp} Fahrenheit is equals to ${Celsicus}`);
+        }
+        else{
+            console.log("Invalid Unit");
+        }
     </script>
 </body>
 </html>
